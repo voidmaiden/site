@@ -13,8 +13,21 @@ Text Domain: twentyseventeen
 Tags:
 */
 
+@font-face {
+    src: url('fonts/Avenir.otf');
+    font-family: Avenir;
+}
+@font-face {
+    src: url('fonts/Avenir Bold.otf');
+    font-family: 'Avenir Bold';
+}
+@font-face {
+    src: url('fonts/Dolce Vita.ttf');
+    font-family: 'Dolce Vita';
+}
+
 :root {
-    --header-font: Dolce Vita;
+    --header-font: 'Dolce Vita';
     --mobile-screen-size: 1100px;
 }
 body, html {
@@ -23,8 +36,8 @@ body, html {
     font-size: 16px;
 }
 a, a:visited {
+    font-family: 'Avenir Bold';
     text-decoration: none !important;
-    font-weight: bold;
     color: #0087CD;
     transition: color 0.15s;
 }
@@ -47,6 +60,7 @@ form.wpcf7-form label, form.wpcf7-form .wpcf7-form-control-wrap, form.wpcf7-form
 	width: 100%;
 }
 a.btn {
+    font-family: 'Avenir';
     overflow: hidden;
     padding: 1rem 3rem;
     border-radius: 999px;
@@ -82,7 +96,7 @@ a.btn svg {
 }
 a.header {
     color: #0056A5;
-    font-weight: bold;
+    font-family: 'Avenir Bold';
     font-size: 1.5rem;
     display: block;
 }
@@ -98,6 +112,9 @@ a:hover {
 }
 h1, h2, h3 {
     font-weight: normal;
+}
+h4, h5, h6, h7 {
+    font-family: 'Avenir Medium';
 }
 h2 {
 	color: #0057A5;
@@ -220,7 +237,7 @@ ul.sub-menu > li + li {
 }
 ul.sub-menu li a {
 	font-size: 0.75rem;
-	font-weight: bold;
+	font-family: 'Avenir Bold';
     text-transform: none;
     letter-spacing: normal;
 	color: #0487CE;
