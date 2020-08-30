@@ -1,366 +1,373 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rooting Through the Past</title>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/cd4da895fa.js" crossorigin="anonymous"></script>
 
-<head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TALAS</title>
 
-<!-- FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+:root {
+    --rttp-header-font: Montserrat;
+    --rttp-default-font: Bitter;
+    --rttp-handwritten-font: Homemade Apple;
+    --rttp-dark-green: #465F3A;
+    --rttp-med-green: #6C8C5D;
+    --rttp-light-green: #A8C39C;
+    --rttp-lightest-green: #C4D9BB;
+    font-size: 16px;
+}
+* {
+    box-sizing: border-box;
+}
+body, html {
+    font-family: var(--rttp-default-font);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+body {
+    background: #111;
+}
+a, a:visited {
+    color: var(--rttp-med-green);
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+    font-weight: 200;
+}
+h1 {
+    font-family: var(--rttp-header-font);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+h1, h2 {
+    font-family: var(--rttp-header-font);
+}
+h1:first-child, h2:first-child {
+    margin-top: 0;
+}
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: #111 url('https://negativespace.co/wp-content/uploads/2018/08/negative-space-road-forest-path-dark-green-track-hike.jpg') bottom center fixed no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    user-select: none;
+}
+#hero #dim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7) 89%);
+    z-index: -1;
+}
+#hero #title {
+    flex: 0 0 100%;
+    max-width: 50%;
+}
+#title #h1 {
+    font-family: var(--rttp-header-font);
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: block;
+}
+#title #h2 {
+    font-family: var(--rttp-default-font);
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 200;
+    font-style: oblique;
+    display: block;
+}
+#header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: #111;
+    background: none;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    transition: background 0.5s;
+}
+#header.scrolled {
+    background: #111;
+}
+#logo {
+    height: 50%;
+    margin-left: 1.5rem;
+}
+#logo img {
+    height: 100%;
+}
+#nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: -0.2rem;
+    margin-right: 2.5rem;
+    width: 100%;
+    text-align: right;
+}
+#nav li {
+    display: inline-block;
+}
+#nav > li + li {
+    margin-left: 3.5rem;
+}
+#nav li a {
+    font-family: var(--rttp-header-font);
+    font-size: 0.7rem;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+#nav li a:hover {
+    color: #aaa;
+}
+#main {
+    width: 100%;
+    background: #171717;
+    position: relative;
+}
+#quote {
+    background: #171717;
+    color: #ccc;
+    padding: 2rem;
+    text-align: center;
+}
+#quote i.fas {
+    font-size: 2rem;
+    margin-right: -0.8rem;
+    padding-bottom: 0.5rem;
+    opacity: 0.2;
+}
+#quote span.quote, #quote i.fas {
+    display: inline-block;
+    vertical-align: bottom;
+}
+#quote span.attribution {
+    font-family: var(--rttp-header-font);
+}
+#page_content {
+    background: #eee;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    padding: 4rem 4rem 8rem;
+}
+#page_content .right {
+    padding-left: 3rem;
+    margin-left: 4rem;
+    border-left: 1px solid #ccc;
+}
+.signature {
+    font-family: var(--rttp-handwritten-font);
+    display: block;
+    font-size: 1.8rem;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: #111;
+    line-height: 4rem;
+    text-align: center;
+    font-family: var(--rttp-default-font);
+    font-size: 0.8rem;
+    color: #ccc;
+    font-weight: 300;
+}
+#page_content .left p:not(:last-child) {
+    line-height: 1.7rem;
+}
+#page_content .right li {
+    margin: 0.5rem 0px;
+}
+#page_content .right h2:not(:first-child) {
+    margin-top: 2rem;
+}
+#page_content .right h2 {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 0.5rem;
+}
+.subscribe_form {
+    margin: 0.5rem 0;
+}
+.subscribe_form label {
+    font-size: 0.9rem;
+    display: block;
+}
+.subscribe_form input {
+    font-family: var(--rttp-default-font);
+    border: 1px solid #aaa;
+    padding: 0.6rem;
+    margin: 0.5rem;
+    width: 100%;
+    transition: box-shadow 0.2s;
+}
+.subscribe_form input:hover, .subscribe_form input:focus {
+    border-color: var(--rttp-light-green);
+}
+.subscribe_form input:focus {
+    box-shadow: 3px 3px 0px var(--rttp-lightest-green), 3px -3px 0px var(--rttp-lightest-green), -3px 3px 0px var(--rttp-lightest-green), -3px -3px 0px var(--rttp-lightest-green);
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.center {
+    text-align: center;
+}
+.subscribe_form button {
+    background: var(--rttp-med-green);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 0;
+    font-family: var(--rttp-header-font);
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+.subscribe_form button:hover, .subscribe_form button:focus {
+    background: var(--rttp-dark-green);
+}
+.social_buttons a {
+    display: inline-grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--rttp-med-green);
+    border-radius: 999px;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: background 0.2s;
+}
+.social_buttons a:hover, .social_buttons a:focus {
+    background: var(--rttp-dark-green);
+}
+.social_buttons a i {
+    margin: auto;
+}
 
-<link rel="stylesheet" href="style.css">
+</style>
 
-</head>
-
-<body>
-
-<div id="hero"></div>
-<div id="headerbg"></div>
-<div id="ttr_header">
-    <div id="intro">
-        <div id="navbg"></div>
-        <img id="logo" src="logo.png">
-        <div class="nav_container">
-            <ul class="menu">
-                <li><a href="index.html" class="nav">Home</a></li>
-                <li><a href="about.html" class="nav">About</a>
-                    <ul class="sub-menu">
-                    <li><a href="about.html">About TALAS</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="partners.html">Our Partners</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="nav">Membership</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">Join TALAS</a></li>
-                        <li><a href="#">2019–20 TALAS Members</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="nav">Careers & Resources</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">Job Seekers Resources</a></li>
-                        <li><a href="#">Mentoring Program</a></li>
-                        <li><a href="#">COVID-19 Resources</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="nav">Latest News</a></li>
-                <li><a href="#" class="nav">Calendar</a></li>
-                <li><a href="#">Join</a></li>
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" id="logo"><img src="93701tree.png"></a>
+            <ul id="nav">
+                <li><a href="#">Welcome</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
-        </div>
-    </div>
-</div>
-<div id="welcome">
-    <div id="frontpage">
-        <div id="title">TALAS</div>
-        <div id="subtitle">Texas Association of Latino Administrators and Superintendents</div>
-        <p>
-            <span class="leadership">The Leadership</span>
-            <span class="advocate">The Advocate</span>
-            <span class="voice">The Voice for Latino Learners and Leaders</span>
-        </p>
-    </div>
-</div>
-<div id="content">
-
-<div class="white section">
-    <div id="bubbles">
-        <div class="col-sm">
-            <div class="card">
-                <span>
-                    <i class="fa fa-comments" aria-hidden="true"></i>
-                </span>
-                Advocacy
+        </header>
+        <div id="hero">
+            <div id="dim"></div>
+            <div id="title">
+                <span id="h1">Rooting Through the Past</span>
+                <span id="h2">Helping you connect with your past so that you can make peace with your future.</span>
             </div>
         </div>
-        <div class="col-sm">
-            <div class="card">
-                <span>
-                    <i class="fa fa-group" aria-hidden="true"></i>
-                </span>
-                Collective Impact
+        <div id="main">
+            <div id="quote"><i class="fas fa-quote-left"></i> <span class="quote">The journey of a thousand miles starts with a single step."</span><br><br>
+            <span class="attribution">— CHINESE PROVERB —</span></div>
+            <div id="page_content">
+            
+            <div class="left">
+<h1>Welcome</h1>
+
+<p>Welcome to my blog! It is a labour of love that I want to share with YOU!</p>
+
+<p>Please enjoy reading about all things related to family, online tree building, ancestral research, and genetic genealogy. My desire is to simplify the process for you as well as share tips and tricks that I have learned. By sharing my journey to find my biological family, I hope I can inspire you to be brave enough to do the same.</p>
+
+<p>In my narcissism related blog posts, my goal is to make you aware of red flags and the dangers of narcissists. They are out there and they are harmful! If you are reading and can relate, please reach out and I will share some helpful resources with you.</p>
+
+<p>In my family blog posts, I intend to share some light-hearted musings about my life and my tribe, who I ADORE.</p><br>
+
+<p style="text-align: center;">All my love,<span class="signature">MamaJo</span></p>
+
+</div>
+            <div class="right">
+            
+                <h2>Latest Posts</h2>
+                <ul>
+                <li><a href="/">Resources for your Irish Ancestry</a></li>
+                <li><a href="/">Resources for Finding your Scottish Ancestors</a></li>
+                <li><a href="/">What are Boundaries?</a></li>
+                <li><a href="/">What is Endogamy?</a></li>
+                <li><a href="/">What is Genetic Genealogy?</a></li>
+                </ul>
+                
+                <h2>Subscribe</h2>
+                
+                <div class="subscribe_form">
+                <label>Full name:</label> <input type="text"><br>
+                <label>Email address:</label> <input type="text"><br>                
+                <div class="center"><button>Subscribe</button></div>
+                </div>
+                
+                <h2>Follow Me</h2>
+                
+                <div class="social_buttons">
+                
+                <a href="https://www.pinterest.com/rootingthroughthepast/"><i class="fab fa-pinterest"></i></a>
+                </div>
+            
             </div>
-        </div>
-        <div class="col-sm">
-            <div class="card">
-                <span>
-                    <i class="fa fa-microphone" aria-hidden="true"></i>
-                </span>
-                Voice
+        
             </div>
+            <div id="footer">Copyright 2020 © Rooting Through the Past. All Rights Reserved.</div>
         </div>
-        <div class="col-sm">
-            <div class="card">
-                <span>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </span>
-                Leadership Development
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div id="main">
-        <div id="news">
-            <h1>Latest News</h1>
-            <img src="https://talasedu.org/wp-content/uploads/2019/11/e-newsletter-graphic-1080x675.png">
-            <a class="header" href="#">TALAS E-newsletter – July 16</a>
-            <span>How to Renew Your Membership Today! TASA's online Member Services Center is the place to go to renew your membership. Simply log in using your username and password. If you forgot your password, retrieve it here. Once logged in, please click on the My Account tab to...</span>
-            <a class="readmore" href="#">Read More</a>
-        </div>
-        <div id="upcoming">
-            <h1>Calendar</h1>
-            <span><h4 style="color: #B5131B;">Upcoming Events</h4>
-                There are no upcoming events at this time.
-            </span>
-        </div>
-        <div id="careers">
-            <h3>Looking for a new career opportunity?</h3>
-            The TASA Career Center features vacancies posted by school districts, ESCs, TEA, charter/private schools, and other education organizations in Texas.
-        </div>
-    </div>
-</div>
-
-<div class="blue section" id="talas_pics">
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="16"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-man-laughing-header.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-mariachis-2.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-mariachis.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-group.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-mtg-woman.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-backdrop.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-guys.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-lavega.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-meeting2.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-smiles.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-couple.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-underwood.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-willie.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-ladies.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-masba-blueshirts.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://talasedu.org/wp-content/uploads/2019/09/talas-meeting.jpg" alt="TALAS members at the TASA|TASB Convention in Dallas, September 2019">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    
-    <div id="caption">
-        <h2>TALAS at TASA|TASB</h2>
-        Members of TALAS came together during the TASA|TASB Convention in Dallas in September 2019 for a joint reception with MASBA, our board meeting, and a mentoring session.
-    </div>
-
-</div>
-
-<div class="white section" id="partners">
-
-<h1>Our Partners</h1>
-
-    <div class="title">
-        <h4>
-            <i class="fa fa-trophy" aria-hidden="true" style="background: #D4B038;"></i>
-            <span style="border-color: #D4B038;">Oro</span>
-        </h4>
-    </div>
-
-    <div class="partners_grid">
-        <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2020/06/renaissance.png"></a></div>
-        <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2019/09/rethink-ed-logo-300x45.png"></a></div>
-        <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2019/09/walden-university-logo-300x129.png"></a></div>
-    </div>
-
-    <div class="title">
-        <h4>
-            <i class="fa fa-trophy" aria-hidden="true" style="background: #AAA9AD;"></i>
-            <span style="border-color: #AAA9AD;">Plata</span>
-        </h4>
-    </div>
-
-    <a href="#"><img src="https://talasedu.org/wp-content/uploads/2020/03/vanir-logo.png" class="single"></a>
-
-    <div class="title">
-        <h4>
-            <i class="fa fa-trophy" aria-hidden="true" style="background: #B08D57;"></i>
-            <span style="border-color: #B08D57;">Bronce</span>
-        </h4>
-    </div>
-
-    <div class="partners_grid">
-        <div class="row">
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2020/06/achieve3000.png"></a></div>
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2020/03/amplify-logo.png"></a></div>
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2019/09/catapult-learning-logo.png"></a></div>
-        </div>
-        <div class="row">
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2019/09/curriculum-associates-logo.jpg"></a></div>
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2019/12/intervene-logo.png"></a></div>
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2019/09/midstate-energy-logo.png"></a></div>
-        </div>
-        <div class="row">
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2019/11/SIA-AI_Logo.png"></a></div>
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2020/03/Staymobile.jpg"></a></div>
-            <div class="partner"><a href="#"><img src="https://talasedu.org/wp-content/uploads/2019/09/swing-education-logo.png"></a></div>
-        </div>
-    </div>
-    
-    <a class="btn" href="#">
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="5.002" height="8.576" viewBox="0 0 5.002 8.576"><path d="M1.06,8.428a.5.5,0,0,1-.71,0l-.2-.2A.49.49,0,0,1,0,7.868V.708A.49.49,0,0,1,.15.348l.2-.2a.5.5,0,0,1,.71,0l3.79,3.79a.48.48,0,0,1,0,.7Z"></path></svg>
-            Learn More About Our Partners
-        </span>
-    </a>
-
-</div>
-
-<div id="footer">
-
-<div id="footer_logo">
-    <img src="logo.png">
-    <img src="logo-text.png" style="filter: brightness(200%);">
-    <div id="desc">
-        TALAS is the premier organization in advocacy for the growth and advancement of Latino learners and leaders. With an unrelenting commitment to improving learning outcomes for Latino learners, TALAS provides leadership development, collective impact, advocacy, and a proactive voice for Latino and non-Latino leaders who have a passion for serving the fastest-growing student population in Texas.
-    </div>
-</div>
-<div id="footer_info">
-    <div id="footer_contact">
-        <h4>Contact Us</h4>
-        <ul class="contact_table">
-			<li class="address">406 E. 11th St.<br>Austin, TX 78701</li>
-			<li class="phone">800.725.8272</li>
-			<li class="email"><a href="#">info@talasedu.org</a></li>
-		</ul>
-    </div>
-    <div id="footer_follow">
-        <h4>Follow Us</h4>
-        <a href="https://www.facebook.com/TexasALAS" class="social-button"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/TALAS4edu" class="social-button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-    </div>
-</div>
-
-</div>
-
-<div id="sf">
-    Copyright 2020 © TALAS. All Rights Reserved.
-</div>
-
-</div>
-
-
-</body>
-
+    </body>
 </html>
 
 <script>
 
-window.onscroll = function() {collapseNav()}
-
-function collapseNav() {
-    var logo = document.getElementById('logo'),
-        navbar = document.getElementById('nav'),
-        navbg = document.getElementById('navbg'),
-        navlinks = document.querySelectorAll('#nav a'),
-        header = document.getElementById('ttr_header'),
-        welcome = document.getElementById('welcome');
-    var viewport_height = (window.innerHeight - 90);
-    var half_viewport = (window.innerHeight / 3);
+const header = document.querySelector('#header');
+window.addEventListener('scroll', () => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         header.className = 'scrolled';
     } else {
         header.className = '';
     }
-}
-var onScroll = (function(){
-  var startPos;
-  function run(){
-    var fromTop = window.pageYOffset, 
-        navbg = document.getElementById('navbg');
-    var rect = navbg.getBoundingClientRect(),
-        scrollDeltaNav;
-    // check if element is in viewport
-    if( (rect.top - window.innerHeight) <= 0 && rect.bottom > 0 )
-       startPos = startPos === undefined ? fromTop : startPos;
-    else{
-      startPos = 0;
-      return;
-    }
-    scrollDeltaNav = fromTop; // left logo speed
-    navbg.style.height = scrollDeltaNav+'px';
-    console.clear();
-    console.log(scrollDeltaNav);
-  }
-  run();
-  return run;
 });
-// window.addEventListener('scroll', onScroll);
 
 </script>
